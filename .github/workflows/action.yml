@@ -27,7 +27,7 @@ jobs:
       - name: Deploy
         id: deploy
         run: |
-          gcloud resource-manager org-policies set-policy --folder=${{ secrets.FOLDER_ID }} ./set-owedIngressSettings.yml
-          gcloud resource-manager org-policies set-policy --folder=${{ secrets.FOLDER_ID }} ./set-owedVpcConnectorEgressSettings.yml
+          gcloud resource-manager org-policies set-policy --folder=${{ secrets.FOLDER_ID }} ./set-allowedIngressSettings.yml
+          gcloud resource-manager org-policies set-policy --folder=${{ secrets.FOLDER_ID }} ./set-allowedVpcConnectorEgressSettings.yml
           gcloud resource-manager org-policies set-policy --folder=${{ secrets.FOLDER_ID }} ./set-requireVPCConnector.yml
           
